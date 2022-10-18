@@ -1,0 +1,51 @@
+" Turn on syntax highlighting 
+syntax on 
+
+" Show linen umbers 
+set number 
+
+" Handle Indentation 
+set expandtab 
+set tabstop=4 
+set softtabstop=4 
+set shiftwidth=4 
+set autoindent
+set textwidth=80 
+
+" Word processor 
+func! WordPRoceessorMode()
+	setlocal textwidth=80
+	setlocal smartindent
+	setlocal spell spelllang=en_us
+	setlocal noexpandtab
+endfu 
+
+com! WP call WordPRoceessorMode()
+
+" JSON Formatting : install jq 
+func! JsonFormat()
+    % ! jq . 
+endfu 
+
+com! JF call JsonFormat()
+
+" Color schema 
+colorscheme darkblue 
+au InsertLeave *colorscheme darkblue
+au InsertEnter *colorscheme molokai
+
+" Package Manager 
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'XadillaX/json-formatter.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'https://github.com/fatih/vim-go.git'
+call vundle#end()
+filetype plugin indent on
