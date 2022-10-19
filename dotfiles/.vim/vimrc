@@ -1,7 +1,8 @@
 " Binding keys 
 nnoremap n gT
 nnoremap p gt
-
+nnoremap tags TagbarToggle
+"nmap <F8> :TagbarToggle<CR>
 " Turn on syntax highlighting 
 syntax on 
 " Enable mouse 
@@ -47,9 +48,14 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'XadillaX/json-formatter.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'https://github.com/fatih/vim-go.git'
+Plugin 'https://github.com/jiangmiao/auto-pairs.git'
 "Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'NLKNguyen/papercolor-theme' "https://github.com/NLKNguyen/papercolor-theme
+Plugin 'https://github.com/airblade/vim-gitgutter.git'
+Plugin 'hashivim/vim-terraform'
+Plugin 'https://github.com/preservim/tagbar.git'
+Plugin 'https://github.com/universal-ctags/ctags.git'
 "Plugin 'artanikin/vim-synthwave84'
 call vundle#end()
 filetype plugin indent on
