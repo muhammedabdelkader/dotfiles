@@ -17,4 +17,5 @@ brew install --cask \
     superduper \
     transmission \
     valentina-studio \
-    vlc
+    vlc \ 
+    navi
