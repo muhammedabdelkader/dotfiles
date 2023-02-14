@@ -1,0 +1,70 @@
+[user]
+    name = Muhammed Abdelkader
+    email = Muhammed.m.abdelkader@gmail.com
+[git-tmbundle]
+    gitnub-path = /Applications/GitNub.app
+    gitx-path = /Applications/GitX.app
+    show-diff-check = yes
+[github]
+    user = GITUB_USER
+    token = GITHUB_TOKEN
+[core]
+    editor = subl  # Change to whatever you want your default git editor to be
+    excludesfile = /Users/MY_USER_NAME/.gitignore
+    quotepath = false
+[color]
+    status = auto
+    branch = auto
+    interactive = auto
+    diff = auto
+[instaweb]
+    httpd = webrick
+    port = 8000
+[git-tmbundle "log"]
+    limit = 10
+[mergetool]
+    keepBackup = true
+[pretty]
+    pretty-history = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[alias]
+    freebase = pull --rebase
+    commit = commit -a -v
+    ci = commit
+    co = checkout
+    b = branch
+    nb = checkout -b
+    stat = status
+    sl = stash list
+    sa = stash apply
+    sd = stash drop
+    quicklog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
+    changes = log --oneline --decorate
+    changelog = show --name-only
+    svnup = svn rebase
+    svnpush = svn dcommit
+    commitnumber = !git log --pretty=oneline | wc -l
+    diffmate = !sh -c 'git diff HEAD $1 | mate -' -
+    difffile = !sh -c 'git diff HEAD $1 | mate -' -
+    diffile = !sh -c 'git diff HEAD $1 | mate -' -
+    difile = !sh -c 'git diff HEAD $1 | mate -' -
+    worddiff = diff --word-diff
+    fakeignore = update-index --assume-unchanged
+    ignore = update-index --assume-unchanged
+    undo = reset --soft --keep HEAD^
+    unstage = reset HEAD
+    first = !sh -c 'git log origin/master --pretty=format:%H  --reverse | head -1'
+    lasttag = !sh -c 'git log --simplify-by-decoration --decorate=short --tags --format="%H" |head -1'
+    wtf = !git-wtf
+    has = branch --contains
+    db = !sh -c 'git branch -D $1 && git push origin :$1' -
+    sweep = !sh -c 'git-sweep cleanup'
+    ph = log --graph --pretty=pretty-history --abbrev-commit --date=relative
+    permission-reset = "git clone git://github.com/balupton/history.js.git help config  diff -p | grep -E '^(diff|old mode|new mode)' | sed -e 's/^old/NEW/;s/^new/old/;s/^NEW/new/' | git apply"
+    username = config --get user.name
+    standup = !sh -c 'git log --pretty=format:\"%Cred%h%Creset - %Cgreen%cr%Creset : %s\" --since=\"`date -v-1d \"+%Y-%m-%d 00:00:00\"`\" --until=\"`date \"+%Y-%m-%d 00:00:00\"`\" --all --author=\"`git config --get user.name`\"'
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
