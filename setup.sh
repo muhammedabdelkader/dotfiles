@@ -16,7 +16,7 @@ chmod a+x *.sh
 ## Use default value 
 ./changeScreenshotsStorage.sh 
 ./moveDock.sh
-
+./touchID_sudo.sh
 
 ##################
 # Add .Dotfiles #
