@@ -155,6 +155,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias banner="fortune | cowsay | lolcat --seed 0 --spread 1.0 -af -s 200 -d 100"
+alias ls="colorls"
 eval "$(pyenv init -)"
 eval "$(pyenv init -)"
 export PATH="/Users/muhammedabdelkader/.pyenv/shims:/opt/homebrew/bin/:/opt/homebrew/bin/:/opt/homebrew/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/muhammedabdelkader/go/bin:$PATH"
@@ -177,3 +178,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#source /tmp/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

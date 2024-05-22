@@ -21,7 +21,7 @@ chmod a+x *.sh
 ##################
 # Add .Dotfiles #
 #################
-
+sudo gem install colorls
 
 ############################
 # Update default settings #
