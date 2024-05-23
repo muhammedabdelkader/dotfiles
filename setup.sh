@@ -22,7 +22,7 @@ chmod a+x *.sh
 # Add .Dotfiles #
 #################
 sudo gem install colorls
-
+sudo brew install neofetch
 ############################
 # Update default settings #
 ###########################
