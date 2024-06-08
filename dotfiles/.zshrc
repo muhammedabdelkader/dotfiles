@@ -152,16 +152,16 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vi ~/.zshrc"
+alias ohmyzsh="vi ~/.oh-my-zsh"
 alias banner="fortune | cowsay | lolcat --seed 0 --spread 1.0 -af -s 200 -d 100"
 alias ls="colorls"
 eval "$(pyenv init -)"
 eval "$(pyenv init -)"
 export PATH="/Users/muhammedabdelkader/.pyenv/shims:/opt/homebrew/bin/:/opt/homebrew/bin/:/opt/homebrew/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/muhammedabdelkader/go/bin:$PATH"
 export PATH="/Users/muhammedabdelkader/.pyenv/shims:/opt/homebrew/bin/:/opt/homebrew/bin/:/opt/homebrew/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/muhammedabdelkader/go/bin:$PATH"
-rdpCloud& 
-sshNAS&
+#rdpCloud& 
+#sshNAS&
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/muhammedabdelkader/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/muhammedabdelkader/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
